@@ -1,11 +1,12 @@
 import type { CSSProperties, ReactNode } from "react";
 
 /** UtilityStrip — the thin navy top-of-page bar, 36px (design system: navigation/UtilityStrip). */
-type Props = { left?: ReactNode; right?: ReactNode; style?: CSSProperties };
+type Props = { left?: ReactNode; right?: ReactNode; style?: CSSProperties; className?: string };
 
-export function UtilityStrip({ left, right, style }: Props) {
+export function UtilityStrip({ left, right, style, className }: Props) {
   return (
     <div
+      className={className}
       style={{
         display: "flex",
         alignItems: "center",

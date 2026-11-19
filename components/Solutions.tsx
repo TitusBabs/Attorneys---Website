@@ -6,12 +6,12 @@ import { solutions } from "@/content/home";
 
 export function Solutions() {
   return (
-    <section id="solutions" style={{ background: "var(--color-cloud)", padding: "88px 0", borderTop: "1px solid var(--color-hairline)" }}>
-      <div style={wrap}>
+    <section id="solutions" className="section-pad" style={{ background: "var(--color-cloud)", padding: "88px 0", borderTop: "1px solid var(--color-hairline)" }}>
+      <div className="wrap" style={wrap}>
         <Reveal>
           <SectionHead kicker={solutions.kicker} title={solutions.title} sub={solutions.sub} />
         </Reveal>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }}>
+        <div className="solutions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }}>
           {solutions.rows.map((r, i) => (
             <Reveal key={i} delay={(i % 3) * 90}>
               {/* hover lift + shadow live in globals.css (.pain-card) */}

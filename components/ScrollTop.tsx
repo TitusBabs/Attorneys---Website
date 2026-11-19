@@ -18,6 +18,7 @@ export function ScrollTop() {
   return (
     <button
       aria-label="Back to top"
+      className="scroll-top"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       style={{ position: "fixed", right: "28px", bottom: "28px", zIndex: 60, width: "52px", height: "52px", borderRadius: "50%", border: "none", cursor: "pointer", background: "var(--color-primary-deep)", color: "var(--color-on-ink)", boxShadow: "var(--shadow-float)", display: "inline-flex", alignItems: "center", justifyContent: "center", opacity: show ? 1 : 0, transform: show ? "translateY(0)" : "translateY(12px)", pointerEvents: show ? "auto" : "none", transition: "opacity 0.3s ease, transform 0.3s ease" }}
     >

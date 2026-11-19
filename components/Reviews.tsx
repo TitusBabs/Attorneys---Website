@@ -19,13 +19,13 @@ export function Reviews() {
     ["chevronRight", 1],
   ];
   return (
-    <section id="reviews" style={{ background: "var(--color-canvas)", padding: "88px 0" }}>
-      <div style={wrap}>
+    <section id="reviews" className="section-pad" style={{ background: "var(--color-canvas)", padding: "88px 0" }}>
+      <div className="wrap" style={wrap}>
         <Reveal>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "40px", flexWrap: "wrap", gap: "16px" }}>
+          <div className="reviews-head" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "40px", flexWrap: "wrap", gap: "16px" }}>
             <div>
               <div style={eyebrow}>{reviews.kicker}</div>
-              <h2 style={{ font: "var(--type-display-lg)", color: "var(--color-ink)", margin: "0", letterSpacing: "-0.5px" }}>{reviews.title}</h2>
+              <h2 className="section-title" style={{ font: "var(--type-display-lg)", color: "var(--color-ink)", margin: "0", letterSpacing: "-0.5px" }}>{reviews.title}</h2>
             </div>
             <div style={{ display: showNav ? "flex" : "none", gap: "10px" }}>
               {nav.map(([ic, dir]) => (
@@ -42,9 +42,9 @@ export function Reviews() {
           </div>
         </Reveal>
         <div style={{ overflow: "hidden" }}>
-          <div style={{ display: "flex", gap: "20px", transform: `translateX(calc(-${start} * (33.333% + 6.66px)))`, transition: "transform .5s var(--ease-standard)" }}>
+          <div className="reviews-track" style={{ display: "flex", gap: "20px", transform: `translateX(calc(-${start} * (33.333% + 6.66px)))`, transition: "transform .5s var(--ease-standard)" }}>
             {data.map((d, i) => (
-              <div key={i} style={{ flex: "0 0 calc(33.333% - 13.33px)", boxSizing: "border-box", background: "var(--color-paper)", border: "1px solid var(--color-hairline)", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-soft)", padding: "26px", display: "flex", flexDirection: "column" }}>
+              <div key={i} className="review-card" style={{ flex: "0 0 calc(33.333% - 13.33px)", boxSizing: "border-box", background: "var(--color-paper)", border: "1px solid var(--color-hairline)", borderRadius: "var(--radius-lg)", boxShadow: "var(--shadow-soft)", padding: "26px", display: "flex", flexDirection: "column" }}>
                 <Stars n={5} />
                 <p style={{ font: "var(--type-body-lg)", fontSize: "17px", color: "var(--color-ink)", margin: "16px 0 22px", lineHeight: 1.45 }}>&ldquo;{d.q}&rdquo;</p>
                 <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "auto" }}>

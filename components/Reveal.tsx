@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 /** Scroll reveal: fade + 24px rise when 15% of the block enters the viewport. */
-export function Reveal({ children, delay = 0, style }: { children: ReactNode; delay?: number; style?: CSSProperties }) {
+export function Reveal({ children, delay = 0, style, className }: { children: ReactNode; delay?: number; style?: CSSProperties; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [vis, setVis] = useState(false);
   useEffect(() => {
@@ -26,6 +26,7 @@ export function Reveal({ children, delay = 0, style }: { children: ReactNode; de
   return (
     <div
       ref={ref}
+      className={className}
       style={{
         opacity: vis ? 1 : 0,
         transform: vis ? "translateY(0)" : "translateY(24px)",

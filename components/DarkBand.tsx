@@ -1,9 +1,9 @@
 import type { CSSProperties, ReactNode } from "react";
 
 /** DarkBand — navy slab section wrapper with optional faint blueprint grid (design system: brand/DarkBand). */
-type Props = { children: ReactNode; padding?: string; grid?: boolean; style?: CSSProperties; id?: string };
+type Props = { children: ReactNode; padding?: string; grid?: boolean; style?: CSSProperties; id?: string; className?: string };
 
-export function DarkBand({ children, padding = "64px 24px", grid = false, style, id }: Props) {
+export function DarkBand({ children, padding = "64px 24px", grid = false, style, id, className }: Props) {
   const gridBg: CSSProperties = grid
     ? {
         backgroundImage:
@@ -14,6 +14,7 @@ export function DarkBand({ children, padding = "64px 24px", grid = false, style,
   return (
     <section
       id={id}
+      className={className}
       style={{
         position: "relative",
         background: "var(--color-primary)",

@@ -8,15 +8,15 @@ import { blueprint } from "@/content/home";
 
 export function Blueprint() {
   return (
-    <DarkBand grid id="blueprint" padding="88px 0">
-      <div style={wrap}>
+    <DarkBand grid id="blueprint" className="section-pad" padding="88px 0">
+      <div className="wrap" style={wrap}>
         <Reveal>
           <SectionHead light kicker={blueprint.kicker} title={blueprint.title} sub={blueprint.sub} />
         </Reveal>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px" }}>
+        <div className="blueprint-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px" }}>
           {blueprint.steps.map((s, i) => (
             <Reveal key={i} delay={i * 90}>
-              <div style={{ position: "relative", height: "100%", boxSizing: "border-box", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.14)", borderRadius: "var(--radius-lg)", padding: "26px" }}>
+              <div className="blueprint-card" style={{ position: "relative", height: "100%", boxSizing: "border-box", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.14)", borderRadius: "var(--radius-lg)", padding: "26px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                   <span style={{ font: "var(--type-price-md)", color: "var(--color-primary-bright)" }}>{s.n}</span>
                   <Icon name={s.icon} size={26} color="var(--color-primary-bright)" />
@@ -27,7 +27,7 @@ export function Blueprint() {
             </Reveal>
           ))}
         </div>
-        <Reveal delay={140} style={{ textAlign: "center", marginTop: "40px" }}>
+        <Reveal delay={140} className="blueprint-cta" style={{ textAlign: "center", marginTop: "40px" }}>
           <BookButton variant="accent" iconRight={<Icon name="arrowRight" size={18} />}>
             {blueprint.cta}
           </BookButton>
