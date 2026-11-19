@@ -11,7 +11,8 @@ export const site = {
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://attorneys.blueprintcpas.tax").replace(/\/$/, ""),
   phone: "(501) 361-9228",
   phoneHref: "tel:+15013619228",
-  email: "admin@zbcpa.tax",
+  email: "Admin@blueprintcpas.tax",
+  emailHref: "mailto:Admin@blueprintcpas.tax",
 };
 
 export const hero = {
@@ -92,5 +93,5 @@ export const contact = {
     { label: "X", href: "https://x.com/Blueprint_tax1", d: "M17.53 3h3.16l-6.9 7.89L22 21h-6.36l-4.98-6.51L4.96 21H1.8l7.38-8.44L2 3h6.52l4.5 5.95L17.53 3Zm-1.11 16.13h1.75L7.66 4.78H5.78l10.64 14.35Z" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/zee-barfoot-cpa", d: "M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" },
   ],
-  copyright: "© 2026 Blueprint Tax Advisors, LLC · Privacy · Terms · Disclosures",
+  copyright: "© 2026 Blueprint Tax Advisors, PLLC · Privacy · Terms · Disclosures",
 };

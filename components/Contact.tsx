@@ -21,7 +21,7 @@ export function Contact() {
                 <span style={{ width: "40px", height: "40px", borderRadius: "var(--radius-md)", background: "rgba(255,255,255,0.08)", display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
                   <Icon name={ic} size={20} color="var(--color-primary-bright)" />
                 </span>
-                {t}
+                {ic === "messageCircle" ? <a href={site.emailHref} style={{ color: "inherit", textDecoration: "none" }}>{t}</a> : t}
               </div>
             ))}
           </div>
